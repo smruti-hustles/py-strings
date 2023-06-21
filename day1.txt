@@ -1,4 +1,4 @@
-Given a string of odd length greater than or equal to 7, 
+'''Given a string of odd length greater than or equal to 7, 
 return a string made of the middle three chars of a given String.
  And if the string length is less than 7, return the original string value itself as the output.
 
@@ -25,7 +25,7 @@ ush
 6	
 Welcome
 lco
-
+'''
 s=input()
 l=len(s)
 if(l<7):
@@ -35,7 +35,7 @@ elif(l%2!=0 and l>=7):
     print(s[m-1:m+2])
 
 
-
+'''
 Given 2 strings, s1 and s2, create a new string by appending s2 in the middle of s1.
 
 1	
@@ -62,7 +62,7 @@ PytJavahon
 programming
 java
 prograjavamming
-
+'''
 # Type your code here
 p=input()
 q=input()
@@ -74,7 +74,7 @@ else:
  print(p[0:m+1]+q+p[m+1:p1])    
     
 
-
+'''
 Given 2 strings, s1, and s2 return a new string made of the first, middle and last char each input strings.
 
 
@@ -102,7 +102,7 @@ AJrpan
 Welcome
 Son
 WScoen
-
+'''
 import math
 p=input()
 q=input()
@@ -112,7 +112,7 @@ m=math.ceil(p1//2)
 n=math.ceil(q1//2)
 print(p[0]+q[0]+p[m]+q[n]+p[-1]+q[-1])
 
-
+'''
 Write a python program to arrange the string characters such that all the lowercase 
 letters should come first followed by all the uppercase letters in each string. 
 If the string contains anything other than alphabets ignore those characters.
@@ -135,7 +135,7 @@ ptnYHO
 6	
 PYTHON is COOl
 islPYTHONCOO
-
+'''
 s=input()
 l=len(s)
 p=""
@@ -147,7 +147,7 @@ for i in range(l):
         q+=s[i]
 print(q+p)        
 
-
+'''
 Write a Python program to count all the Lowercase, Uppercase, Digits and Special symbols from a given string.
 Line 1: <String value>
 
@@ -257,7 +257,7 @@ PayvtahJon
 Welcome
 Hello
 WoelllceoHme
-
+'''
 s1 = input()
 s2 = input()
 s3 = s2[::-1]
@@ -272,7 +272,7 @@ elif(l1<=l3):
     for i in range(l1):
         p+=s1[i]+s3[i]
     print(p+s3[l1:l3])        
-
+'''
 Write a Python program to find all occurrences of the sub-string “USA” in given string ignoring the case
 
 If the sub-string is not present return the count as 0.
@@ -294,7 +294,7 @@ Welcome to USA. usa awesome, isn't it?
 6	
 My country is India
 0
-
+'''
 s=input()
 b=s.count('usa')
 c=s.count('USA')
