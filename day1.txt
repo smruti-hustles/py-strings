@@ -1,0 +1,308 @@
+Given a string of odd length greater than or equal to 7, 
+return a string made of the middle three chars of a given String.
+ And if the string length is less than 7, return the original string value itself as the output.
+
+ 1	
+Python
+Python
+
+2	
+JhonDipPeta
+Dip
+
+3	
+JaSonAy
+Son
+
+4	
+Programming
+ram
+
+5	
+Anushya
+ush
+
+6	
+Welcome
+lco
+
+s=input()
+l=len(s)
+if(l<7):
+    print(s)
+elif(l%2!=0 and l>=7):
+    m=l//2
+    print(s[m-1:m+2])
+
+
+
+Given 2 strings, s1 and s2, create a new string by appending s2 in the middle of s1.
+
+1	
+Ault
+Kelly
+AuKellylt
+2	
+Anushya
+Srikanth
+AnusSrikanthhya
+3	
+Tony
+Strak
+ToStrakny
+4	
+America
+Japan
+AmerJapanica
+5	
+Python
+Java
+PytJavahon
+6	
+programming
+java
+prograjavamming
+
+# Type your code here
+p=input()
+q=input()
+p1=len(p)
+m=p1//2
+if(p1%2==0):
+ print(p[0:m]+q+p[m:p1])
+else:
+ print(p[0:m+1]+q+p[m+1:p1])    
+    
+
+
+Given 2 strings, s1, and s2 return a new string made of the first, middle and last char each input strings.
+
+
+1	
+Python
+Java
+PJhvna
+2	
+Tony
+Strak
+TSnryk
+3	
+Doctor
+Strange
+DStare
+4	
+Hulk
+Banner
+HBlnkr
+5	
+America
+Japan
+AJrpan
+6	
+Welcome
+Son
+WScoen
+
+import math
+p=input()
+q=input()
+p1=len(p)
+q1=len(q)
+m=math.ceil(p1//2)
+n=math.ceil(q1//2)
+print(p[0]+q[0]+p[m]+q[n]+p[-1]+q[-1])
+
+
+Write a python program to arrange the string characters such that all the lowercase 
+letters should come first followed by all the uppercase letters in each string. 
+If the string contains anything other than alphabets ignore those characters.
+
+1	
+Python IS SUCH a cool LanGuage123@#$
+ythonacoolanuagePISSUCHLG
+2	
+MCU is the best
+isthebestMCU
+3	
+WHAT A NICE MOVIE
+WHATANICEMOVIE
+4	
+must watch movie
+mustwatchmovie
+5	
+pYtHOn
+ptnYHO
+6	
+PYTHON is COOl
+islPYTHONCOO
+
+s=input()
+l=len(s)
+p=""
+q=""
+for i in range(l):
+    if(s[i].isupper()):
+        p+=s[i]
+    elif(s[i].islower()):
+        q+=s[i]
+print(q+p)        
+
+
+Write a Python program to count all the Lowercase, Uppercase, Digits and Special symbols from a given string.
+Line 1: <String value>
+
+Line 1: <Number of uppercase characters>
+
+Line 2: <Number of lowercase characters>
+
+Line 3: <Number of digits characters>
+
+Line 4: <Number of special symbols characters>
+
+
+1	
+1083
+0
+0
+4
+0
+2	
+must watch movie
+0
+14
+0
+2
+3	
+SUPERB
+6
+0
+0
+0
+4	
+!@#$%
+0
+0
+0
+5
+5	
+Anushya.1083@gmail.com
+1
+14
+4
+3
+6	
+PYTHON is COOL
+10
+2
+0
+2
+
+
+Write a Python program to take 2 string as input and create a new string by mixing the 1st char of string one with the last character of string two and next the 2nd character of string one with the last before character of string two and so on. If any characters are left out, put them at the end of the newly created string.
+
+
+Constraints:
+Input Format:
+
+Line 1: <String 1 value>
+
+Line 2: <String 2 value>
+
+Output Format:
+
+Line 1: <resulting string>
+
+ 
+
+
+Example:
+Input:
+
+Python
+
+Java
+
+Output:
+
+PayvtahJon
+
+
+Explanation:
+NA
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+Java
+Javascript
+JtapviarcsavaJ
+2	
+Abc
+Xyz
+AzbycX
+3	
+Fluent
+Foggy
+FylgugeonFt
+4	
+gate
+enter
+graettene
+5	
+Python
+Java
+PayvtahJon
+6	
+Welcome
+Hello
+WoelllceoHme
+
+s1 = input()
+s2 = input()
+s3 = s2[::-1]
+p=""
+l1=len(s1)
+l3=len(s3)
+if(l1>l3):
+    for i in range(l3):
+        p+=s1[i]+s3[i]
+    print(p+s1[l3:l1])        
+elif(l1<=l3): 
+    for i in range(l1):
+        p+=s1[i]+s3[i]
+    print(p+s3[l1:l3])        
+
+Write a Python program to find all occurrences of the sub-string “USA” in given string ignoring the case
+
+If the sub-string is not present return the count as 0.
+1	
+Welcome to India. India is a great place.
+0
+2	
+USA USA USA USA
+4
+3	
+usa usa usa usa usa usa
+6
+4	
+USA usa Usa USa usA uSA UsA uSa India Japan
+8
+5	
+Welcome to USA. usa awesome, isn't it?
+2
+6	
+My country is India
+0
+
+s=input()
+b=s.count('usa')
+c=s.count('USA')
+e=s.count('Usa')
+f=s.count('USa')
+g=s.count('usA')
+h=s.count('UsA')
+i=s.count('uSa')
+j=s.count('uSA')
+d=b+c+e+f+g+h+i+j
+print(d)
