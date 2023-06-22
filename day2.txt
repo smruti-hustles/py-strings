@@ -1,0 +1,326 @@
+Write a Python program to take 2 string as input and create a new string by mixing the 1st char of string one with the last character of string two and next the 2nd character of string one with the last before character of string two and so on. If any characters are left out, put them at the end of the newly created string.
+
+
+Constraints:
+Input Format:
+
+Line 1: <String 1 value>
+
+Line 2: <String 2 value>
+
+Output Format:
+
+Line 1: <resulting string>
+
+ 
+
+
+Example:
+Input:
+
+Python
+
+Java
+
+Output:
+
+PayvtahJon
+
+
+Explanation:
+NA
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+Java
+Javascript
+JtapviarcsavaJ
+2	
+Abc
+Xyz
+AzbycX
+3	
+Fluent
+Foggy
+FylgugeonFt
+4	
+gate
+enter
+graettene
+5	
+Python
+Java
+PayvtahJon
+6	
+Welcome
+Hello
+WoelllceoHme
+
+
+p1=len(p)
+q=""
+if s1>p1:
+    for i in range(p1):
+      q+=(s[i]+p[i])
+    print(q+s[p1:s1])       
+elif p1>=s1:
+    for i in range(s1):
+      q+=(s[i]+p[i])
+    print(q+p[s1:p1])       
+     
+-------------------------------------------------------------------------------------------------------------------------      
+
+Write a Python program to read 2 string values from the user and check whether all the characters of String1 are present in String2.
+
+Note: You should check for all characters in string1 present in string2 but no need to bother about the order in which they appear.
+
+
+Constraints:
+Input Format:
+
+Line 1: <String 1 value>
+
+Line 2: <String 2 value>
+
+Output Format:
+
+Print True -> if the string is a balanced string
+
+Print False -> if the string is a unbalanced string
+
+
+Example:
+Input:
+
+hut
+
+hunter
+
+Output:
+
+True
+
+
+Explanation:
+String1 = hut
+
+String2 = hunter
+
+All the characters of String1 are present in String2 also. Hence return 1 as the result.
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+program
+programming
+True
+2	
+java
+python
+False
+3	
+son
+sonni
+True
+4	
+plan
+planet
+True
+5	
+plant
+planet
+True
+6	
+sure
+surely
+True
+7	
+hut
+hunter
+True
+8	
+Welcome
+Well done
+False
+
+s=input()
+t=input()
+s1=list(s)
+t1=list(t)
+p=len(s)
+q=len(t)
+x=0
+if p<q:
+ for i in s1:
+    for j in t1:
+        if i==j:
+            x+=1
+            break
+ if(x==p):
+     print("True")
+ else:
+     print("False")
+elif p>=q:
+ for i in t1:
+    for j in s1:
+        if i==j:
+            x+=1
+            break
+ if(x==q):
+     print("True")
+ else:
+     print("False")    
+    
+     
+---------------------------------------------------------------------------------------------------------------
+Question 4/ 5
+Write a Python program to read the string in the below mentioned format, and print the sum and average of the digits that appear in the string, ignoring all other characters.
+
+Format : 
+
+English=<marks> Science=<marks> Math=<marks> History=<marks>
+
+
+Constraints:
+Input Format:
+
+Line 1: <String 1 value>
+
+Output Format:
+
+<Numbers present in the given string – print each value in a separate line>
+
+<sum value>
+
+<average value>
+
+
+Example:
+Input:
+
+English=98 Science=80 Math=100 History=65
+
+Output:
+
+98
+
+80
+
+100
+
+65
+
+343
+
+85.75
+
+
+Explanation:
+Marks Scored in various subjects -
+
+English=98
+
+Science=80
+
+Math=100
+
+History=65
+
+Total = 98+80+100+65 :  343
+
+Average: 85.75
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+English=100 Science=100 Math=100 History=100
+100
+100
+100
+100
+400
+100.0
+2	
+English=98 Science=83 Math=68 History=65
+98
+83
+68
+65
+314
+78.5
+3	
+English=38 Science=40 Math=40 History=48
+38
+40
+40
+48
+166
+41.5
+4	
+English=98 Science=80 Math=100 History=65
+98
+80
+100
+65
+343
+85.75
+-----------------------------------------------------------------------------------------------------------------
+Write a Python program to read a string as an input and count occurrences of all characters within a string
+
+
+Constraints:
+Input Format:
+
+Line 1: <String value>
+
+Output Format:
+
+Line 1: <Dictionary>
+
+
+Example:
+Input:
+
+PythonPython
+
+Output:
+
+{'P': 2, 'y': 2, 't': 2, 'h': 2, 'o': 2, 'n': 2}
+
+
+Explanation:
+String = PythonPython
+
+We calculate the frequency of each and every character and we create it a dictionary with the character as the key and the frequency as the value.
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+Programming
+{'P': 1, 'r': 2, 'o': 1, 'g': 2, 'a': 1, 'm': 2, 'i': 1, 'n': 1}
+2	
+Welcome to Python Programming
+{'W': 1, 'e': 2, 'l': 1, 'c': 1, 'o': 4, 'm': 3, ' ': 3, 't': 2, 'P': 2, 'y': 1, 'h': 1, 'n': 2, 'r': 2, 'g': 2, 'a': 1, 'i': 1}
+3	
+JAVA
+{'J': 1, 'A': 2, 'V': 1}
+4	
+aaaaaaa
+{'a': 7}
+5	
+PythonPython
+{'P': 2, 'y': 2, 't': 2, 'h': 2, 'o': 2, 'n': 2}
+
+
+s=input()
+l=len(s)
+dict={}
+for i in range(l):
+    x=s.count(s[i])
+    dict[s[i]]=x
+print(dict)    

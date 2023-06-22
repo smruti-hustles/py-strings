@@ -1,0 +1,105 @@
+Write a Python program to read a String value dynamically abd reverse the given string value.
+
+
+Constraints:
+Input Format:
+
+Line 1: <String value>
+
+Output Format:
+
+Line 1: <String value in reverse order>
+
+
+Example:
+Input:
+
+Instacks
+
+Output:
+
+skcatsnI
+
+
+Explanation:
+NA
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+Python is Cool
+looC si nohtyP
+2	
+aaaaaaa
+aaaaaaa
+3	
+Welcome to Python Programming
+gnimmargorP nohtyP ot emocleW
+4	
+madam
+madam
+5	
+Instacks
+skcatsnI
+6	
+cool
+looc
+--------------------------------------------------------------------------------------------------------------------
+Write a Python program to Remove special symbols/Punctuation from a given string.
+
+
+Constraints:
+Input Format:
+
+Line 1: <String value>
+
+Output Format:
+
+Line 1: <Resultant String>
+
+
+Example:
+Input:
+
+/*Jon is @developer & musician
+
+Output:
+
+Jon is developer  musician
+
+
+Explanation:
+NA
+
+
+Public Test Cases:
+#	INPUT	EXPECTED OUTPUT
+1	
+Wel-come to the! world @ Python!!!
+Welcome to the world  Python
+2	
+Welcome to Python-Programming
+Welcome to PythonProgramming
+3	
+Welcome 123 to Python @ Programming
+Welcome 123 to Python  Programming
+4	
+!@#$%1
+1
+5	
+/*Jon is @developer & musician
+Jon is developer  musician
+6	
+email@id!superb#
+emailidsuperb
+
+
+
+s=input()
+t=""
+for i in range(len(s)):
+    if(s[i].isalnum() or s[i].isspace()):
+        t+=s[i]
+print(t)
+-------------------------------------------------------------------        
